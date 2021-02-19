@@ -24,6 +24,20 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CPU'
+  /sum/<arg1>/<arg2>:
+    get:
+      tags:
+        - SUM
+      operationId: os_pack.sum
+      description: Returns sum of arg1 and arg2
+      responses:
+        '200':
+          description: 'Adds arg1 and arg 2'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CPU'
+
 servers:
   - url: 'http://localhost:8080/engr-222'
 components:
